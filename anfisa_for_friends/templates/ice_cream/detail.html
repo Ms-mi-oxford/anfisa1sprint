@@ -1,11 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}
   Анфиса для друзей. Мороженое классический пломбир
 {% endblock %}
 {% block content %}
   <div class="container">
   <!-- Блок content -->
-    <h1 class="pb-2 mb-0">Классический пломбир</h1>  
+  {% for ice_cream in ice_cream_detail %}
+    <h1 class="pb-2 mb-0">{{ice_cream.id}}</h1>  
       <div class="row mt-3">
         <div class="col-12 col-md-6">
           <h2>Описание</h2>
@@ -16,11 +18,12 @@
           <img 
             class="img-fluid" 
             height="400" width="300"
-            src="img/image-holder.png"
+            src="{% static 'img/image-holder.png' %}"
             >      
         </div>
     </div>     
     <!-- Конец блока content --> 
+    {% endfor %}
   </div>  
 {% endblock %}
  
