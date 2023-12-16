@@ -8,9 +8,9 @@
     <!-- Блок content -->
     <h1 class="pb-2 mb-0">Каталог мороженого</h1>
       <div class="row">
-      <!-- Начинается перебор мороженого  в цикле -->
+      <!-- Начинается перебор мороженого в цикле -->
         {% for ice_cream in ice_cream_list %}
-        {% block card %}{% endblock %}
+          {% include "ice_cream/card.html" %}
         {% endfor %}
         <!-- Конец цикла  -->
       </div>

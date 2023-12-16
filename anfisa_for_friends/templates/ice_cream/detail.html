@@ -6,8 +6,7 @@
 {% block content %}
   <div class="container">
   <!-- Блок content -->
-  {% for ice_cream in ice_cream_detail %}
-    <h1 class="pb-2 mb-0">{{ice_cream.id}}</h1>  
+    <h1 class="pb-2 mb-0">{{ice_cream.title}}</h1>  
       <div class="row mt-3">
         <div class="col-12 col-md-6">
           <h2>Описание</h2>
@@ -23,7 +22,6 @@
         </div>
     </div>     
     <!-- Конец блока content --> 
-    {% endfor %}
+
   </div>  
 {% endblock %}
- 
